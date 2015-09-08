@@ -116,7 +116,7 @@ setRefClass("OAuth",
                 httpFunc(URLencode(URL), params=params, consumerKey=.self$consumerKey,
                          consumerSecret=.self$consumerSecret,
                          oauthKey=.self$oauthKey, oauthSecret=.self$oauthSecret,
-                         customHeader.self$customHeader, curl=getCurlHandle(), signMethod=.self$signMethod, ...)
+                         customHeader.self$customHeader, curl=curl, signMethod=.self$signMethod, ...)
               }
               )
             )
