@@ -56,7 +56,8 @@ setRefClass("OAuth",
                   if (browseUrl) {
                     browseURL(verifyURL)
                   }
-                  .self$verifier <- readline(prompt=msg)
+                  cat(msg)
+                  .self$verifier <- readLines("stdin", 1)
                 }
                 params <- c(oauth_verifier=.self$verifier)
                 resp <- oauthPOST(.self$accessURL, .self$consumerKey, .self$consumerSecret,
